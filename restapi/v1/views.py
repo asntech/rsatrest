@@ -49,7 +49,10 @@ class SpeciesListViewSet(ListAPIView):
 
         #####----CODE goes here to call the Perl script to read stdout and put into the species list-----#######
 
-        species = ['A','B','X','Y',Z]
+
+        output = os.system("supported-organisums")
+       
+        species = ['A','B','X','Y','Z']
 
         data_dict = {"species": species}
         
